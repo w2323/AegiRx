@@ -1,0 +1,316 @@
+{
+  "inheritance": [
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ai\\AIInteractionChecker.java",
+      "class": "AIInteractionChecker",
+      "type": "implements",
+      "parent": "InteractionCheckStrategy",
+      "line": 12
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ai\\LocalInteractionChecker.java",
+      "class": "LocalInteractionChecker",
+      "type": "implements",
+      "parent": "InteractionCheckStrategy",
+      "line": 10
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\DatabaseHandler.java",
+      "class": "DatabaseHandler",
+      "type": "implements",
+      "parent": "PersistenceHandler",
+      "line": 4
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\FileHandler.java",
+      "class": "FileHandler",
+      "type": "implements",
+      "parent": "PersistenceHandler",
+      "line": 9
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\Admin.java",
+      "class": "Admin",
+      "type": "extends",
+      "parent": "User",
+      "line": 6
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\Manufacturer.java",
+      "class": "Manufacturer",
+      "type": "extends",
+      "parent": "User",
+      "line": 6
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\Patient.java",
+      "class": "Patient",
+      "type": "extends",
+      "parent": "User",
+      "line": 8
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\PharmacyStaff.java",
+      "class": "PharmacyStaff",
+      "type": "extends",
+      "parent": "User",
+      "line": 6
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\observer\\CaretakerNotificationObserver.java",
+      "class": "CaretakerNotificationObserver",
+      "type": "implements",
+      "parent": "AlertObserver",
+      "line": 6
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\observer\\UIAlertObserver.java",
+      "class": "UIAlertObserver",
+      "type": "implements",
+      "parent": "AlertObserver",
+      "line": 10
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\MainApp.java",
+      "class": "MainApp",
+      "type": "extends",
+      "parent": "Application",
+      "line": 9
+    }
+  ],
+  "composition_aggregation": [
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\DatabaseConnectionManager.java",
+      "class": "DatabaseConnectionManager",
+      "field": "connection",
+      "type": "Connection",
+      "line": 11
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\DietaryAlert.java",
+      "class": "DietaryAlert",
+      "field": "severity",
+      "type": "AlertSeverity",
+      "line": 13
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\InteractionReport.java",
+      "class": "InteractionReport",
+      "field": "severity",
+      "type": "AlertSeverity",
+      "line": 12
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\MedicineBatch.java",
+      "class": "MedicineBatch",
+      "field": "status",
+      "type": "BatchStatus",
+      "line": 17
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\Patient.java",
+      "class": "Patient",
+      "field": "activeMedications",
+      "type": "List<Medication>",
+      "line": 11
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\domain\\User.java",
+      "class": "User",
+      "field": "role",
+      "type": "UserRole",
+      "line": 13
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\DrugInteractionService.java",
+      "class": "DrugInteractionService",
+      "field": "strategy",
+      "type": "InteractionCheckStrategy",
+      "line": 16
+    }
+  ],
+  "grasp": [
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\BatchDAO.java",
+      "class": "BatchDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\DietaryAlertDAO.java",
+      "class": "DietaryAlertDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\DrugProfileDAO.java",
+      "class": "DrugProfileDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\FoodEntryDAO.java",
+      "class": "FoodEntryDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\MedicationDAO.java",
+      "class": "MedicationDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\PersistenceHandlerFactory.java",
+      "class": "PersistenceHandlerFactory",
+      "pattern": "Creator",
+      "line": 1,
+      "explanation": "Responsible for creating objects (e.g. Factory pattern)."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\PharmacyDAO.java",
+      "class": "PharmacyDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\SaleDAO.java",
+      "class": "SaleDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\dao\\UserDAO.java",
+      "class": "UserDAO",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\observer\\CaretakerNotificationObserver.java",
+      "class": "CaretakerNotificationObserver",
+      "pattern": "Polymorphism",
+      "line": 1,
+      "explanation": "Uses polymorphism for event handling or observation."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\observer\\UIAlertObserver.java",
+      "class": "UIAlertObserver",
+      "pattern": "Polymorphism",
+      "line": 1,
+      "explanation": "Uses polymorphism for event handling or observation."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\AIService.java",
+      "class": "AIService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\BatchService.java",
+      "class": "BatchService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\DietaryConflictService.java",
+      "class": "DietaryConflictService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\DrugInteractionService.java",
+      "class": "DrugInteractionService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\InventoryService.java",
+      "class": "InventoryService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\MedicationProfileService.java",
+      "class": "MedicationProfileService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\SaleService.java",
+      "class": "SaleService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\SmartLocatorService.java",
+      "class": "SmartLocatorService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\service\\UserService.java",
+      "class": "UserService",
+      "pattern": "Information Expert / High Cohesion",
+      "line": 1,
+      "explanation": "Manages specific domain data operations or business logic, exhibiting high cohesion."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\controllers\\AdminDashboardController.java",
+      "class": "AdminDashboardController",
+      "pattern": "Controller",
+      "line": 1,
+      "explanation": "Handles UI events and delegates work to services."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\controllers\\ManufacturerDashboardController.java",
+      "class": "ManufacturerDashboardController",
+      "pattern": "Controller",
+      "line": 1,
+      "explanation": "Handles UI events and delegates work to services."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\controllers\\PatientDashboardController.java",
+      "class": "PatientDashboardController",
+      "pattern": "Controller",
+      "line": 1,
+      "explanation": "Handles UI events and delegates work to services."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\controllers\\PharmacyDashboardController.java",
+      "class": "PharmacyDashboardController",
+      "pattern": "Controller",
+      "line": 1,
+      "explanation": "Handles UI events and delegates work to services."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\ui\\controllers\\RoleSelectorController.java",
+      "class": "RoleSelectorController",
+      "pattern": "Controller",
+      "line": 1,
+      "explanation": "Handles UI events and delegates work to services."
+    },
+    {
+      "file": "d:\\UND\\src\\main\\java\\com\\aegisrx\\util\\GBIGenerator.java",
+      "class": "GBIGenerator",
+      "pattern": "Creator",
+      "line": 1,
+      "explanation": "Responsible for creating objects (e.g. Factory pattern)."
+    }
+  ]
+}
