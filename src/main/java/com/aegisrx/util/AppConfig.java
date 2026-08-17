@@ -32,7 +32,7 @@ public class AppConfig {
 		props.setProperty("db.url",
 				"jdbc:sqlserver://localhost;instanceName=SQLEXPRESS;databaseName=aegisrx;encrypt=true;trustServerCertificate=true;loginTimeout=2;");
 		props.setProperty("db.user", "sa");
-		props.setProperty("db.password", "YourStrong!Passw0rd");
+		props.setProperty("db.password", "Password comes here");
 		props.setProperty("db.driver", "com.microsoft.sqlserver.jdbc.SQLServerDriver");
 		props.setProperty("persistence.type", "database");
 		props.setProperty("gemini.api.key", "");
